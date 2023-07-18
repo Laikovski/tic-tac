@@ -1,0 +1,14 @@
+name: Simple Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Замените на ветку, на которой вы хотите запускать пайплайн
+
+jobs:
+  echo_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message
+        run: echo "Hello, GitHub Actions!"
