@@ -1,14 +1,19 @@
-name: Simple Pipeline
+name: Echo Pipeline
 
 on:
   push:
     branches:
-      - main  # Замените на ветку, на которой вы хотите запускать пайплайн
+      - main
+  workflow_dispatch:  # Добавляем возможность запуска пайплайна вручную
 
 jobs:
-  echo_message:
+  echo_job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "Hello, GitHub Actions!"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Echo a message
+        run: echo "Hello, world!"
+
