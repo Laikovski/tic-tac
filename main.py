@@ -1,5 +1,5 @@
 import re
-option = '         '
+option = '   '
 unit = 'X'
 def create_field():
     global option
