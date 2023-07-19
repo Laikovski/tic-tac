@@ -20,5 +20,6 @@ jobs:
       - name: Request test run
         uses: peter-evans/repository-dispatch@v1
         with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: Laikovski/pytests
           event-type: run_tests
