@@ -16,4 +16,9 @@ jobs:
 
       - name: Echo a message
         run: echo "Hello, world!"
-
+        
+      - name: Request test run
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          repository: Laikovski/pytests
+          event-type: run_tests
